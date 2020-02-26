@@ -6,7 +6,13 @@
     "run": true
   },
   "html": {
-    "run": false
+    "run": true,
+    "pug": false,
+    "src": "html",
+    "dist": "",
+    "minify": true,
+    "inline": false,
+    "lint": false
   },
   "css": {
     "run": true,
@@ -37,7 +43,7 @@
     "dist": "fonts"
   },
   "favicon": {
-    "run": true
+    "run": false
   },
   "critical": {
     "run": false
