@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smodev - Ivan Smokrović</title>
   <link rel="stylesheet" href="/css/style.min.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/4b39256c41.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,22 +16,41 @@
     <div class="grad-bar"></div>
     <div class="nav-wrapper">
       <nav class="navbar">
-        <img src="./img/smodev-txt.png" alt="Smodev text Logo without name, just Smodev">
+        <a href="/"><img src="./img/smodev-txt.png" alt="Smodev text Logo without name, just Smodev"></a>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-        <ul class="nav no-search">
-          <li class="nav-item"><a href="#">Home</a></li>
+        <ul class="nav">
           <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Work</a></li>
-          <li class="nav-item"><a href="#">Careers</a></li>
-          <li class="nav-item"><a href="#">Contact Us</a></li>
-          <i class="fas fa-search" id="search-icon"></i>
-          <input class="search-input" type="text" placeholder="Search..">
+          <li class="nav-item"><a href="#">Skills</a></li>
+          <li class="nav-item"><a href="#">Blog</a></li>
+          <li class="nav-item"><a href="#">Pojects</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
         </ul>
       </nav>
+    </div>
+    <div class="section1">
+      <div class="profile"><img src="./img/profile_img.jpg" alt="My profile picture with lensball">
+      </div>
+      <div class="typewriter">
+        <h1>Hi I'm Smodev <br> I
+          <span class="txt-rotate color" data-period="2000"
+            data-rotate='[ "love to develop.", "am creative.", "love design.", "try my best.", "make mistakes.", "fix mistakes" ]'></span><span
+            class="Typewriter-cursor">|</span>
+        </h1>
+      </div>
+      <div class="section1-content">
+        <p>My real name is Ivan Smokrovic, based in Osijek (Croatia) and I am a self-taught UI developer since 2017.</p>
+        <p>I'm very dedicated and determined, but often also lazy (who can blame me). In a team, I really flourish, but
+          I am one of those who like to charge and be at the front.</p>
+        <p>I have an eye for detail and I like to optimize things.</p>
+        <p>Sometimes that can be good and sometimes bad, I can get lost in the details in ways that I often forget to
+          bring things to an end. (I've been building this portfolio for three months <i class="far fa-grin"></i>)
+        </p>
+      </div>
+
     </div>
   </div>
   <script src="./js/script.js"></script>
