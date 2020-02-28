@@ -14,6 +14,15 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 .page-wrapper {
   width: 100%;
   height: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "navbar"
+    "section1"
+    "section2"
+    "section3"
+    "section4"
+    "footer";
 }
 
 .nav-wrapper {
@@ -24,6 +33,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   top: 0;
   background-color: #fff;
   z-index: 1;
+  grid-area: navbar;
 }
 
 .grad-bar {
@@ -79,6 +89,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 
 /* Section1 - About section */
 .section1 {
+  grid-area: section1;
   display: grid;
   width: 100%;
   height: auto;
@@ -101,17 +112,47 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   }
 }
 
+#about {
+  background-color: $primary;
+  transform: skewY(-5deg);
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
+  margin: 15px 0px;
+}
+
 .typewriter {
   display: block;
   justify-content: center;
   margin: 0 auto;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
 }
 
 .section1-content {
+  max-width: 1280px;
   display: block;
   text-align: justify;
   margin: 0px 15px;
 }
+
+.section2 {
+  grid-area: section2;
+  display: grid;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#skills {
+  background-color: $primary;
+  transform: skewY(-5deg);
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
+  margin: 15px 0px;
+}
+
 
 /* MOBILE MENU & ANIMATION */
 
@@ -158,7 +199,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 .Typewriter-cursor {
   -webkit-animation: Typewriter-cursor 1s infinite;
   animation: Typewriter-cursor 1s infinite;
-  margin-left: 1px;
+  /*margin-left: 1px;*/
 }
 
 .color {
@@ -246,17 +287,19 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   /* MOBILE HEADINGS */
 
   h1 {
-    margin: 20px 0px 20px 0px;
-    font-size: 1.9rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1rem;
   }
 
   p {
-    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-size: 1rem;
   }
 
   /* MOBILE NAVIGATION */

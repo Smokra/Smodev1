@@ -6,7 +6,8 @@
   "dependencies": {
     "gulp-real-favicon": "^0.3.2",
     "ityped": "^1.0.3",
-    "starter-project-cli": "^1.1.10"
+    "starter-project-cli": "^1.1.10",
+    "svgxuse": "^1.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
