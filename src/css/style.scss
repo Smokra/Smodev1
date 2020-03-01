@@ -89,8 +89,8 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 
 /* Section1 - About section */
 .section1 {
-  grid-area: section1;
   display: grid;
+  grid-area: section1;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -112,7 +112,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   }
 }
 
-#about {
+#about, #skills, #blog, #projects{
   background-color: $primary;
   transform: skewY(-5deg);
   text-transform: uppercase;
@@ -125,6 +125,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   display: block;
   justify-content: center;
   margin: 0 auto;
+  padding: 1rem 0;
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
 }
 
@@ -142,15 +143,6 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   height: auto;
   margin: 0 auto;
   padding: 10px 0;
-}
-
-#skills {
-  background-color: $primary;
-  transform: skewY(-5deg);
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
-  margin: 15px 0px;
 }
 
 
