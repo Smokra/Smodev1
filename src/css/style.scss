@@ -52,7 +52,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
 
   & img {
@@ -65,7 +65,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   & ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-self: end;
   }
 }
@@ -76,16 +76,24 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
+  text-transform: uppercase;
   transition: color 0.3s ease-out;
-
-
+  margin: 0 10px;
 }
 
 .nav-item a:hover {
   color: $primary;
 }
 
+.nav-item a:active {
+  color: #000;
+}
+
 /* SECTIONS */
+
+.color {
+  background-color: $primary;
+}
 
 /* Section1 - About section */
 .section1 {
@@ -94,7 +102,6 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 10px 0;
 }
 
 .profile {
@@ -112,13 +119,17 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   }
 }
 
-#about, #skills, #blog, #projects{
+#about,
+#skills,
+#blog,
+#projects {
   background-color: $primary;
   transform: skewY(-5deg);
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
   margin: 15px 0px;
+  padding: 1.4rem 0;
 }
 
 .typewriter {
@@ -129,11 +140,17 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206, 89, 55, 0);
 }
 
-.section1-content {
+.section1-content,
+.section2-content {
   max-width: 1280px;
   display: block;
   text-align: justify;
-  margin: 0px 15px;
+  margin: 1rem;
+
+  h4 {
+    text-transform: uppercase;
+    line-height: 2rem;
+  }
 }
 
 .section2 {
@@ -142,7 +159,60 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 10px 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  font-size: 3em;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  filter: grayscale(100%);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: $primary;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $primary transparent;
+}
+
+.tooltip:hover {
+  filter: none;
+
+  .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 
@@ -192,10 +262,6 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   -webkit-animation: Typewriter-cursor 1s infinite;
   animation: Typewriter-cursor 1s infinite;
   /*margin-left: 1px;*/
-}
-
-.color {
-  background-color: $primary;
 }
 
 @-webkit-keyframes Typewriter-cursor {
@@ -290,7 +356,6 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
   }
 
   p {
-    margin-top: 1rem;
     font-size: 1rem;
   }
 
@@ -302,7 +367,12 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
     position: fixed;
     justify-content: start;
     top: 55px;
-    background-color: #fff;
+    background: rgb(81, 183, 251);
+    background: -moz-linear-gradient(180deg, rgba(81, 183, 251, 1) 23%, rgba(200, 228, 241, 1) 73%);
+    background: -webkit-linear-gradient(180deg, rgba(81, 183, 251, 1) 23%, rgba(200, 228, 241, 1) 73%);
+    background: linear-gradient(180deg, rgba(81, 183, 251, 1) 23%, rgba(200, 228, 241, 1) 73%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#51b7fb", endColorstr="#c8e4f1", GradientType=1);
+    /*background-color: #fff;*/
     width: 100%;
     height: calc(100vh - 55px);
     transform: translate(-101%);
