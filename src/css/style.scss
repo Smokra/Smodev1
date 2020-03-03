@@ -141,7 +141,8 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 }
 
 .section1-content,
-.section2-content {
+.section2-content,
+.section3-content {
   max-width: 1280px;
   display: block;
   text-align: justify;
@@ -213,6 +214,15 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
     visibility: visible;
     opacity: 1;
   }
+}
+
+
+.section3 {
+  grid-area: section2;
+  display: grid;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 
