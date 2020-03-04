@@ -57,7 +57,7 @@ window.onload = function() {
   }
 };
 
-// Card
+// ######CARD######
 
 const height = (elem) => {
 
@@ -115,5 +115,4 @@ document.querySelectorAll('.card').forEach((elem) => {
 		author.style.transform = `none`
 
 	}
-
 })

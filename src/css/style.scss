@@ -323,7 +323,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 			right: 0;
 			bottom: 0;
 			opacity: .5;
-			background: linear-gradient(30deg, rgba(#2f4ebd, .85), rgba(#2f4ebd, .5));
+			background: linear-gradient(30deg, rgba($primary, .85), rgba($primary, .5));
 			transition-property: opacity;
 			transition-delay: $delay;
 		}
