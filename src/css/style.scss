@@ -529,6 +529,7 @@ iframe {
   border-radius: 2px;
   overflow: hidden;
   padding: 52px 60px 78px 60px;
+  margin-bottom: 15px;
 
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -659,59 +660,13 @@ textarea.input100 {
   transform: scale(1);
 }
 
-
-/*------------------------------------------------------------------
-[ Button ]*/
-/*
-.container-contact100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 20px;
-}
-
-.contact100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 200px;
-  height: 60px;
-  background-color: $primary;
-
-  font-size: 14px;
-  color: #000000;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 2px 2px 2px rgba(206, 89, 55, 0);
-  line-height: 1.2;
-  text-transform: uppercase;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn:hover {
-  background-color: #333333;
-  color: #FFF;
-}
-*/
-
-
 .btn-cont {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 70px;
 
   .btn {
     position: relative;
-    padding: 20px 70px;
+    padding: 20px 50px;
     border: 1px solid $primary;
     color: $primary;
     text-decoration: none;
@@ -926,51 +881,74 @@ textarea.input100 {
 
 
 /* Footer */
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+.footer {
+  height: 50px;
 }
 
-li {
-  display: list-item;
-  text-align: center;
-  margin-right: 1rem;
-}
-
-.links {
+.social-icons {
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  justify-content: space-around;
+  vertical-align: middle;
 
-  a {
-    display: flex;
-    padding: .5rem;
-    font-size: 3rem;
-    line-height: 1;
-    color: #414141;
-    background-position: 0% 50%;
-    text-decoration: none;
-    background-image: linear-gradient(45deg, #414141 0%, #848484 33%, hsl(198, 90%, 53%) 66%, hsl(218, 90%, 50%) 100%);
-  }
+}
+.glow-on-hover {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  color: #000000;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
 }
 
-.fab {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg,#51b7fb,#46a2df,#2ba2f1,#81c7f5,#30698f,#1a6aa0,#054d7e,#1d71a9,#51b7fb);
+  position: absolute;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(2px);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 50%;
 }
 
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 0 0;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
 /* MOBILE MENU & ANIMATION */
 
 .menu-toggle .bar {
