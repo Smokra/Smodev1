@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-real-favicon": "^0.3.2",
+    "gulp-sourcemaps": "^2.6.5",
     "ityped": "^1.0.3",
     "starter-project-cli": "^1.1.10",
     "svgxuse": "^1.2.6"

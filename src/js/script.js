@@ -1,13 +1,5 @@
-/* Hamburger */
-
-$('.menu-toggle').click(function(){
-   $(".nav").toggleClass("mobile-nav");
-   $(this).toggleClass("is-active");
-});
-
-
-/*Typewriter*/
-var TxtRotate = function(el, toRotate, period) {
+/*------------------- Typewriter -----------------------*/
+var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -17,7 +9,7 @@ var TxtRotate = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -27,12 +19,14 @@ TxtRotate.prototype.tick = function() {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 100 - Math.random() * 100;
 
-  if (this.isDeleting) { delta /= 2; }
+  if (this.isDeleting) {
+    delta /= 2;
+  }
 
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
@@ -43,14 +37,14 @@ TxtRotate.prototype.tick = function() {
     delta = 400;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
   var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
+  for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
     if (toRotate) {
@@ -59,75 +53,89 @@ window.onload = function() {
   }
 };
 
-// ######CARD######
+/* ------------------ Hamburger ------------------------*/
+
+$('.menu-toggle').click(function () {
+  $(".nav").toggleClass("mobile-nav");
+  $(this).toggleClass("is-active");
+});
+
+// find all links in mobile nav
+// attach event listener
+// when clicked remove "mobile-nav" class
+// no more than 9 lines of code (no jquerz)
+// hint: addEventListener
+
+/*-------------------- CARD ------------------------*/
 
 const height = (elem) => {
 
-	return elem.getBoundingClientRect().height
+  return elem.getBoundingClientRect().height
 
 }
 
 const distance = (elemA, elemB, prop) => {
 
-	const sizeA = elemA.getBoundingClientRect()[prop]
-	const sizeB = elemB.getBoundingClientRect()[prop]
+  const sizeA = elemA.getBoundingClientRect()[prop]
+  const sizeB = elemB.getBoundingClientRect()[prop]
 
-	return sizeB - sizeA
+  return sizeB - sizeA
 
 }
 
 const factor = (elemA, elemB, prop) => {
 
-	const sizeA = elemA.getBoundingClientRect()[prop]
-	const sizeB = elemB.getBoundingClientRect()[prop]
+  const sizeA = elemA.getBoundingClientRect()[prop]
+  const sizeB = elemB.getBoundingClientRect()[prop]
 
-	return sizeB / sizeA
+  return sizeB / sizeA
 
 }
 
+// first find all cards
+// then check if cards lenght exists
+// then applz function
+console.log(document.querySelectorAll('.card'))
+
 document.querySelectorAll('.card').forEach((elem) => {
 
-	const head = elem.querySelector('.card__head')
-	const image = elem.querySelector('.card__image')
-	const author = elem.querySelector('.card__author')
-	const body = elem.querySelector('.card__body')
-	const foot = elem.querySelector('.card__foot')
+  const head = elem.querySelector('.card__head')
+  const image = elem.querySelector('.card__image')
+  const author = elem.querySelector('.card__author')
+  const body = elem.querySelector('.card__body')
+  const foot = elem.querySelector('.card__foot')
 
-	elem.onmouseenter = () => {
+  elem.onmouseenter = () => {
 
-		elem.classList.add('hover')
+    elem.classList.add('hover')
 
-		const imageScale = 1 + factor(head, body, 'height')
-		image.style.transform = `scale(${ imageScale })`
+    const imageScale = 1 + factor(head, body, 'height')
+    image.style.transform = `scale(${ imageScale })`
 
-		const bodyDistance = height(foot) * -1
-		body.style.transform = `translateY(${ bodyDistance }px)`
+    const bodyDistance = height(foot) * -1
+    body.style.transform = `translateY(${ bodyDistance }px)`
 
-		const authorDistance = distance(head, author, 'height')
-		author.style.transform = `translateY(${ authorDistance }px)`
+    const authorDistance = distance(head, author, 'height')
+    author.style.transform = `translateY(${ authorDistance }px)`
 
-	}
+  }
 
-	elem.onmouseleave = () => {
+  elem.onmouseleave = () => {
 
-		elem.classList.remove('hover')
+    elem.classList.remove('hover')
 
-		image.style.transform = `none`
-		body.style.transform = `none`
-		author.style.transform = `none`
+    image.style.transform = `none`
+    body.style.transform = `none`
+    author.style.transform = `none`
 
-	}
+  }
 })
 
 /* Contact form */
-
 (function ($) {
-  "use strict";
 
-
-  /*==================================================================
-  [ Validate ]*/
   var input = $('.validate-input .input100');
+
 
   $('.validate-form').on('submit',function(){
       var check = true;

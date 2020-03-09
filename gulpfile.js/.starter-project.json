@@ -21,7 +21,7 @@
     "dist": "css",
     "minify": true,
     "autoprefix": false,
-    "sourcemaps": false,
+    "sourcemaps": true,
     "lint": false
   },
   "js": {
@@ -29,7 +29,7 @@
     "src": "js",
     "dist": "js",
     "uglify": true,
-    "sourcemaps": false,
+    "sourcemaps": true,
     "lint": false
   },
   "gfx": {
