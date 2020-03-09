@@ -3,10 +3,13 @@ $dark: #252528;
 $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 76%);
 
 * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: 'Rubik', 'Karla', sans-serif;
 }
 
 
@@ -14,7 +17,6 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 
 .page-wrapper {
   width: 100%;
-  //height: auto;
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
@@ -575,7 +577,6 @@ label {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: OpenSans-Regular;
   font-size: 15px;
   color: #333333;
   line-height: 1.2;
@@ -668,7 +669,6 @@ textarea.input100 {
   right: 12px;
   pointer-events: none;
 
-  font-family: OpenSans-Regular;
   color: #c80000;
   font-size: 14px;
   line-height: 1.4;
@@ -723,7 +723,6 @@ textarea.input100 {
     background-color: transparent;
     text-decoration: none;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     -webkit-font-smoothing: antialiased;
