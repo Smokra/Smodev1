@@ -182,6 +182,7 @@ body {
   }
 }
 
+
 @media only screen and (min-width: 1280px) {
   .navbar {
     height: 80px;
@@ -315,11 +316,37 @@ body {
   max-width: 1280px;
   //text-align: justify;
   margin: 0 auto;
-  margin-top: 65px;
-  margin-bottom: 65px;
+  margin: 65px 15px;
 }
 
 /*--------------------- SECTION 1 querys ----------------------------------*/
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  .section1 {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    .profile {
+      margin: 20px 0px 0px 15px;
+
+      & img {
+        height: 450px;
+        width: 450px;
+        border-radius: 50%;
+        background: $grad;
+        border: 0px solid #eee;
+        padding: 20px;
+      }
+    }
+
+    .typewriter {
+      font-size: x-large;
+      padding-top: 140px;
+    }
+  }
+}
+
 @media only screen and (min-width: 1280px) {
   h3 {
     font-size: 2rem;
