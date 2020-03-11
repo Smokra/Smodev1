@@ -12,19 +12,9 @@ body {
   font-family: 'Rubik', 'Karla', sans-serif;
 }
 
-
 /*--------------------------- BASIC SETUP --------------------------------*/
 
 .page-wrapper {
-  /*display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    "navbar"
-    "section1"
-    "section2"
-    "section3"
-    "section4"
-    "footer";*/
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -182,14 +172,49 @@ body {
   }
 }
 
-
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 721px) {
   .navbar {
-    height: 80px;
+    height: 60px;
 
     ul {
       margin: 0;
     }
+
+    img {
+      height: 30px;
+    }
+  }
+
+  .nav {
+    height: 50px;
+    align-items: center;
+    width: 80%;
+    padding: 0px;
+  }
+
+  .navbar .nav-item a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .navbar {
+    height: 70px;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .nav {
+    height: 60px;
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .navbar {
+    height: 80px;
 
     img {
       height: 60px;
@@ -198,9 +223,17 @@ body {
 
   .nav {
     height: 70px;
-    align-items: center;
-    width: 60%;
-    padding: 0px;
+    width: 70%;
+  }
+
+  .navbar .nav-item a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1690px) {
+  .nav {
+    width: 65%;
   }
 
   .navbar .nav-item a {
@@ -220,7 +253,6 @@ body {
 #blog,
 #projects,
 #contact {
-  //display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: $primary;
@@ -236,21 +268,14 @@ body {
 
 /* -------------------------SECTION 1 - About section-------------------- */
 .section1 {
-  //display: grid;
-  //grid-area: section1;
-  //flex-flow: row wrap;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   width: 100%;
-  //margin: 0 auto;
 }
 
 .profile {
-  //display: block;
-  //justify-content: center;
   margin: 0 auto;
-  //flex-direction: row-reverse;
 
   & img {
     height: 250px;
@@ -306,21 +331,25 @@ body {
 }
 
 .section1-1 {
-  //display: flex;
   flex-direction: row;
 }
 
 .section1-1content {
-  //display: flex;
-  //flex-direction: row;
   max-width: 1280px;
-  //text-align: justify;
   margin: 0 auto;
-  margin: 65px 15px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 /*--------------------- SECTION 1 querys ----------------------------------*/
-@media only screen and (min-width: 960px) and (max-width: 1279px) {
+@media only screen and (max-width: 720px) {
+  .section1-1content {
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 721px) {
   .section1 {
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -331,19 +360,51 @@ body {
       margin: 20px 0px 0px 15px;
 
       & img {
-        height: 450px;
-        width: 450px;
+        height: 350px;
+        width: 350px;
         border-radius: 50%;
         background: $grad;
         border: 0px solid #eee;
-        padding: 20px;
+        padding: 15px;
       }
     }
 
     .typewriter {
-      font-size: x-large;
-      padding-top: 140px;
+      font-size: 1.2rem;
+      padding-top: 110px;
     }
+  }
+
+  .section1-1content {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .section1 .profile {
+    margin: 20px 0px 0px 15px;
+
+    & img {
+      height: 450px;
+      width: 450px;
+      padding: 20px;
+    }
+  }
+
+  .section1 .typewriter {
+    font-size: x-large;
+    padding-top: 160px;
+  }
+
+  .section1-1content {
+    margin-top: 70px;
+    margin-bottom: 15px;
+  }
+
+  .section1-1content {
+    margin-top: 60px;
+    margin-bottom: 20px;
   }
 }
 
@@ -361,17 +422,36 @@ body {
   }
 
   .section1 {
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: center;
     max-width: 1280px;
     margin: 0 auto;
+
+    .profile img {
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+      background: $grad;
+      border: 0px solid #eee;
+      padding: 20px;
+    }
   }
 
-  .profile {
-    margin: 0;
+  .section1 .typewriter {
+    font-size: xx-large;
+    padding-top: 140px;
+  }
 
-    & img {
+  .section1-1content {
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1690px) {
+  .section1 {
+    margin: 0 auto;
+
+    .profile img {
       height: 550px;
       width: 550px;
       border-radius: 50%;
@@ -390,8 +470,6 @@ body {
 /* ---------------------------SECTION 2 - Skills-------------------------- */
 
 .section2 {
-  //grid-area: section2;
-  //display: grid;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -403,6 +481,7 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 65px;
+  padding: 0 15px;
   max-width: 1280px;
 }
 
@@ -461,9 +540,31 @@ body {
 }
 
 /* ------------------------- Section 2 - queries ---------------------- */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 721px) {
+  .section2-content {
+    margin: 0 auto;
+    margin-top: 65px;
+    max-width: 1280px;
+  }
+
   .section2-content .icon {
-    font-size: 10em;
+    font-size: 4em;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .section2-content .icon {
+    font-size: 6em;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section2-content {
+    margin-bottom: 15px;
+  }
+
+  .icon {
+    font-size: 8em;
   }
 }
 
@@ -471,11 +572,8 @@ body {
 /* ------------------------- SECTION 3 - Blog -------------------------*/
 
 .section3 {
-  //grid-area: section3;
-  //display: grid;
   width: 100%;
   height: auto;
-  //margin: 0 auto;
 }
 
 .section3-content {
@@ -484,14 +582,6 @@ body {
   margin-top: 65px;
   margin-bottom: 65px;
   flex-direction: column;
-  //display: grid;
-  //grid-gap: 1rem;
-  //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /*
-  a {
-    color: #000000;
-    text-decoration: none;
-  }*/
 }
 
 .card {
@@ -503,7 +593,8 @@ body {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  width: 350px;
+  width: 90%;
+  margin: 15px;
   background: white;
   color: currentColor;
   text-decoration: none;
@@ -678,17 +769,24 @@ body {
 }
 
 /* ------------------------- Section 3 - queries ---------------------- */
+@media only screen and (min-width: 720px) {
+  .card {
+    width: 45%;
+  }
+}
+
 @media only screen and (min-width: 1280px) {
   .section3-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .card {
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    width: 380px;
   }
 }
 
@@ -710,7 +808,7 @@ body {
   text-align: center;
 
   img {
-    max-width: 350px;
+    width: 100%;
     filter: drop-shadow(0px 0px 20px rgb(96, 102, 104));
   }
 
@@ -722,12 +820,16 @@ body {
 }
 
 /* ------------------------- Section 4 - queries ---------------------- */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 720px) {
+  .section4-content {
+    margin: 0 auto;
+  }
+
   .mockup {
     justify-content: space-around;
 
     img {
-      max-width: 600px;
+      width: 45%;
     }
   }
 }
@@ -924,8 +1026,6 @@ textarea.input100 {
   -o-transform: scale(1);
   transform: scale(1);
 }
-
-
 
 /*------------------------ Alert validate ----------------------------*/
 
@@ -1159,10 +1259,9 @@ textarea.input100 {
   }
 }
 
-
 /* --------------------------- FOOTER -----------------------------------*/
 .footer {
-  height: 50px;
+  height: auto;
 }
 
 .social-icons {
@@ -1170,7 +1269,6 @@ textarea.input100 {
   flex-direction: row;
   justify-content: space-around;
   vertical-align: middle;
-
 }
 
 .glow-on-hover {
@@ -1243,12 +1341,21 @@ textarea.input100 {
 
 /* ------------------------- Footer - queries ---------------------- */
 @media only screen and (min-width: 1280px) {
-  .icons {
-    font-size: 10em;
+  .glow-on-hover {
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    outline: none;
+    color: #000000;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50%;
   }
 }
 
-/* ---------------------- KEYFRAME ANIMATIONS -------------------------- */
+/* ---------------------- GRADBAR ANIMATIONS -------------------------- */
 
 @-webkit-keyframes gradbar {
   0% {
