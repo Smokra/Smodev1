@@ -16,6 +16,7 @@ body {
 
 .page-wrapper {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -253,6 +254,7 @@ body {
 #blog,
 #projects,
 #contact {
+  height: auto;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: $primary;
@@ -272,6 +274,7 @@ body {
   flex-wrap: nowrap;
   flex-direction: column;
   width: 100%;
+  height: auto;
 }
 
 .profile {
@@ -794,6 +797,7 @@ body {
 /* -----------------------SECTION 4 - Projects --------------------------- */
 .section4 {
   width: 100%;
+  height: auto;
 }
 
 .section4-content {

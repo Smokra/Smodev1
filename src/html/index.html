@@ -16,18 +16,18 @@
   <div class="page-wrapper">
     <section class="nav-wrapper">
       <nav class="navbar">
-        <a href="/"><img src="./img/smodev-txt.png" alt="Smodev text Logo without name, just Smodev"></a>
+        <a data-scroll href="#"><img src="./img/smodev-txt.png" alt="Smodev text Logo without name, just Smodev"></a>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
         <ul class="nav">
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#skills">Skills</a></li>
-          <li class="nav-item"><a href="#blog">Blog</a></li>
-          <li class="nav-item"><a href="#projects">Projects</a></li>
-          <li class="nav-item"><a href="#contact">Contact</a></li>
+          <li class="nav-item"><a data-scroll href="#about">About</a></li>
+          <li class="nav-item"><a data-scroll href="#skills">Skills</a></li>
+          <li class="nav-item"><a data-scroll href="#blog">Blog</a></li>
+          <li class="nav-item"><a data-scroll href="#projects">Projects</a></li>
+          <li class="nav-item"><a data-scroll href="#contact">Contact</a></li>
         </ul>
       </nav>
     </section>
@@ -303,7 +303,14 @@
   </div>
   <div class="grad-bar"></div>
   <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 600,
+      speedAsDuration: true
+    });
 
+  </script>
 </body>
 
 </html>
