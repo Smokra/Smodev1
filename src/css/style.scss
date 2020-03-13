@@ -649,7 +649,7 @@ body {
     bottom: 0;
     background-size: cover;
     background-position: center;
-    background-image: url('../img/change.jpeg');
+    background-image: var(--src);
     transform-origin: top center;
     transition-property: transform;
     transition-delay: $delay;
@@ -679,6 +679,7 @@ body {
 
   &__body {
     position: relative;
+    height: 100%;
     padding: 2em;
     transition-property: transform;
     transition-delay: $delay;
