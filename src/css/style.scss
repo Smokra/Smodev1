@@ -6,6 +6,7 @@ $white: #fff;
 $light-gray: #fefefe;
 $alert: #c80000;
 $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 76%);
+$box-shadow: 0 1px 15px -10px rgba(0,0,0,.8);
 
 * {
   box-sizing: border-box;
@@ -13,6 +14,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 
 html {
   scroll-behavior: smooth;
+  font-size: 13px;
 }
 
 body {
@@ -46,6 +48,7 @@ body {
   position: sticky;
   top: 0;
   background-color: $white;
+  box-shadow: $box-shadow;
   z-index: 1;
 }
 
@@ -238,8 +241,8 @@ body {
   height: auto;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: $primary;
-  transform: skewY(-5deg);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(81,183,251,1) 50%, rgba(255,255,255,1) 100%);
+  transform: skewY(-3deg);
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
@@ -318,7 +321,7 @@ body {
 }
 
 .section1-1content {
-  max-width: 1280px;
+  max-width: 50em;
   margin: 0 auto;
   margin-right: 15px;
   margin-left: 15px;
@@ -326,13 +329,19 @@ body {
 
 /*--------------------- SECTION 1 querys ----------------------------------*/
 @media only screen and (max-width: 720px) {
+  p {
+    font-size: 1.3em;
+  }
   .section1-1content {
-    margin-top: 50px;
-    margin-bottom: 15px;
+    padding: 10px;
   }
 }
 
 @media only screen and (min-width: 721px) {
+  p {
+    font-size: 1.5em;
+  }
+
   .section1 {
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -353,18 +362,25 @@ body {
     }
 
     .typewriter {
-      font-size: 1.2rem;
-      padding-top: 110px;
+      font-size: 1.5rem;
+      padding-top: 120px;
     }
   }
 
   .section1-1content {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    padding-top: 10px;
   }
 }
 
 @media only screen and (min-width: 960px) {
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
   .section1 .profile {
     margin: 20px 0px 0px 15px;
 
@@ -379,16 +395,6 @@ body {
     font-size: x-large;
     padding-top: 160px;
   }
-
-  .section1-1content {
-    margin-top: 70px;
-    margin-bottom: 15px;
-  }
-
-  .section1-1content {
-    margin-top: 60px;
-    margin-bottom: 20px;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -398,10 +404,6 @@ body {
 
   h4 {
     font-size: 1.7rem;
-  }
-
-  p {
-    font-size: 1.5rem;
   }
 
   .section1 {
@@ -421,12 +423,6 @@ body {
   .section1 .typewriter {
     font-size: xx-large;
     padding-top: 140px;
-  }
-
-  .section1-1content {
-    margin: 0 auto;
-    margin-top: 70px;
-    margin-bottom: 30px;
   }
 }
 
@@ -584,7 +580,7 @@ body {
   overflow: hidden;
   transition-property: color;
   transition-delay: $delay;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+  box-shadow: $box-shadow;
 
   &.hover {
     color: $white;
@@ -850,7 +846,7 @@ label {
   overflow: hidden;
   padding: 52px 60px 78px 60px;
   margin-bottom: 15px;
-  box-shadow: 0 3px 20px 0px $dark;
+  box-shadow: $box-shadow;
 }
 
 /*==================================================================
