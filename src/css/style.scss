@@ -7,6 +7,12 @@ $light-gray: #fefefe;
 $alert: #c80000;
 $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 76%);
 $box-shadow: 0 1px 15px -10px rgba(0,0,0,.8);
+$bshadow: 0 1px 15px -10px rgba(0, 0, 0, 0.8);
+$tshadow: 1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+$transition: 0.8s cubic-bezier(0.51, 0.92, 0.24, 1);
+$delay: 0.2s;
+$duration: 0.8s;
+$color: #239dd5;
 
 * {
   box-sizing: border-box;
@@ -542,7 +548,7 @@ body {
   }
 
   .section2-content .icon {
-    font-size: 6em;
+    font-size: 5em;
   }
 }
 
@@ -554,7 +560,7 @@ body {
 
 @media only screen and (min-width: 1280px) {
   .icon {
-    font-size: 10em;
+    font-size: 7em;
   }
 }
 
@@ -571,9 +577,9 @@ body {
   margin: 0 auto;
   margin-top: 65px;
   margin-bottom: 65px;
-  flex-direction: column;
+  justify-content: space-around;
 }
-
+/*
 .card {
 
   $delay: .15s;
@@ -757,6 +763,166 @@ body {
     opacity: .8;
   }
 }
+*/
+
+.card {
+  max-width: 350px;
+  height: 500px;
+  position: relative;
+  box-shadow: $bshadow;
+
+  .front img {
+    transition: $transition;
+  }
+}
+
+.card:hover {
+  .front img {
+    transform: scale(3);
+    transition-delay: $delay;
+    transition-duration: $duration;
+  }
+
+  .top-content {
+    z-index: 1;
+    transform: translateY(-150px);
+    transition-delay: $delay;
+    transition-duration: $duration;
+  }
+
+  .bottom-content {
+    z-index: 1;
+    text-shadow: $tshadow;
+    transform: translateY(-140px);
+    transition-delay: $delay;
+    transition-duration: $duration;
+    a {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
+  }
+
+  .link {
+    display: inline;
+    z-index: 1;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    text-shadow: $tshadow;
+  }
+}
+
+.card::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 157, 225, 0.2);
+  border-bottom: 5px solid $color;
+  transition: $transition;
+}
+
+.card:hover::after {
+  display: block;
+  transition: $transition;
+}
+
+.link:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  background: $color;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.effect {
+  overflow: hidden;
+  transition: $transition;
+}
+
+.front {
+  width: 100%;
+  height: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.top-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  margin: 5%;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: $tshadow;
+  transition: $transition;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 50%;
+  position: absolute;
+  line-height: 1.2;
+  font-size: 0.8em;
+  margin: 5%;
+  font-weight: 200;
+  transition: $transition;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  p {
+    color: #000;
+  }
+}
+
+.link {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: $tshadow;
+}
+
+.profile-blog {
+  margin-right: 10px;
+
+
+  & img {
+    width: 65px;
+    border-radius: 50%;
+  }
+}
+
+.profile-info {
+  line-height: 2px;
+}
 
 /* ------------------------- Section 3 - queries ---------------------- */
 @media only screen and (min-width: 720px) {
@@ -773,10 +939,6 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-  }
-
-  .card {
-    width: 380px;
   }
 }
 

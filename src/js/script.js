@@ -120,7 +120,7 @@ $('.menu-toggle').click(function () {
 })(jQuery);
 
 /*-------------------- CARD ------------------------*/
-
+/*
 const height = (elem) => {
 
   return elem.getBoundingClientRect().height
@@ -184,3 +184,4 @@ document.querySelectorAll('.card').forEach((elem) => {
   }
 })
 
+*/
