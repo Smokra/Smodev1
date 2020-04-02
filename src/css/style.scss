@@ -9,6 +9,7 @@ $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 
 $box-shadow: 0 1px 15px -10px rgba(0,0,0,.8);
 $bshadow: 0 1px 15px -10px rgba(0, 0, 0, 0.8);
 $tshadow: 1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+$neonWhite:  0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
 $transition: 0.8s cubic-bezier(0.51, 0.92, 0.24, 1);
 $delay: 0.2s;
 $duration: 0.8s;
@@ -55,7 +56,7 @@ body {
   top: 0;
   background-color: $white;
   box-shadow: $box-shadow;
-  z-index: 1;
+  z-index: 99;
 }
 
 .navbar {
@@ -80,9 +81,10 @@ body {
 
   & .nav-item a {
     color: $black;
-    font-size: 0.9rem;
+    font-size: 1.3em;
     font-weight: 400;
     text-decoration: none;
+    text-shadow: $neonWhite;
     text-transform: uppercase;
     transition: color 0.3s ease-out;
 
@@ -135,7 +137,7 @@ body {
     flex-direction: column;
     position: fixed;
     justify-content: start;
-    top: 40px;
+    top: 50px;
     background: rgb(81, 183, 251);
     background: linear-gradient(180deg, rgba(81, 183, 251, 1) 23%, rgba(200, 228, 241, 1) 73%);
     width: 100%;
@@ -251,10 +253,11 @@ body {
   transform: skewY(-3deg);
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
+  text-shadow: $neonWhite;
   margin: 15px 0px;
   padding: 1.4rem 0;
   justify-content: center;
+  font-size: 1.6em;
 }
 
 
@@ -271,8 +274,8 @@ body {
   margin: 0 auto;
 
   & img {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     background: $grad;
     border: 0px solid #eee;
@@ -288,6 +291,13 @@ body {
   margin: 0 auto;
   padding: 1rem 0;
   text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
+
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 2em
+  }
 }
 
 .Typewriter-cursor {
@@ -358,8 +368,8 @@ body {
       margin: 20px 0px 0px 15px;
 
       & img {
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 300px;
         border-radius: 50%;
         background: $grad;
         border: 0px solid #eee;
@@ -368,14 +378,20 @@ body {
     }
 
     .typewriter {
-      font-size: 1.5rem;
-      padding-top: 120px;
+      font-size: 1.3rem;
+      padding-top: 10%;
     }
   }
 
   .section1-1content {
     margin: 0 auto;
     padding-top: 10px;
+  }
+
+  .section3-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -391,15 +407,15 @@ body {
     margin: 20px 0px 0px 15px;
 
     & img {
-      height: 450px;
-      width: 450px;
+      height: 400px;
+      width: 400px;
       padding: 20px;
     }
   }
 
   .section1 .typewriter {
     font-size: x-large;
-    padding-top: 160px;
+    padding-top: 100px;
   }
 }
 
@@ -579,194 +595,10 @@ body {
   margin-bottom: 65px;
   justify-content: space-around;
 }
-/*
-.card {
-
-  $delay: .15s;
-  $duration: .4s;
-  $timing: cubic-bezier(.51, .92, .24, 1);
-
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 15px;
-  background: $white;
-  color: currentColor;
-  text-decoration: none;
-  overflow: hidden;
-  transition-property: color;
-  transition-delay: $delay;
-  box-shadow: $box-shadow;
-
-  &:hover {
-    color: $white;
-    transition-delay: 0;
-  }
-
-  &,
-  &__image,
-  &__image::after,
-  &__author,
-  &__body,
-  &__foot,
-  &__border {
-    transition-duration: $duration;
-    transition-timing-function: $timing;
-  }
-
-  &__head {
-    position: relative;
-    padding-top: 70%;
-  }
-
-  &__author {
-    position: absolute;
-    padding: 2em;
-    left: 0;
-    bottom: 0;
-    color: $white;
-    transition-property: transform;
-    transition-delay: $delay;
-  }
-
-  &.hover &__author {
-    transition-delay: 0;
-  }
-
-  &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    background-image: var(--src);
-    transform-origin: top center;
-    transition-property: transform;
-    transition-delay: $delay;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: .5;
-      background: linear-gradient(30deg, rgba(#1a2a63, .85), rgba(#1a2a63, .5));
-      transition-property: opacity;
-      transition-delay: $delay;
-    }
-  }
-
-  &.hover &__image {
-    transition-delay: 0;
-
-    &::after {
-      opacity: 1;
-      transition-delay: 0;
-    }
-  }
-
-  &__body {
-    position: relative;
-    height: 100%;
-    padding: 2em;
-    transition-property: transform;
-    transition-delay: $delay;
-  }
-
-  &.hover &__body {
-    transition-delay: 0;
-  }
-
-  &__headline {
-    font-weight: 400;
-    margin: 0 0 .8em;
-  }
-
-  &__text {
-    line-height: 1.5;
-    margin: 0;
-    opacity: .8;
-  }
-
-  &__foot {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0 2em 2em;
-    opacity: 0;
-    transition-property: opacity;
-  }
-
-  &.hover &__foot {
-    opacity: 1;
-    transition-delay: $delay;
-  }
-
-  &__link {
-    color: currentColor;
-    text-decoration: none;
-    border-bottom: 2px solid $primary;
-  }
-
-  &__border {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 6px;
-    background: $primary;
-    transform: scaleY(0);
-    transition-property: transform;
-  }
-
-  &.hover &__border {
-    transform: none;
-    transition-delay: $delay;
-  }
-
-}
-
-.author {
-
-  display: flex;
-  align-items: center;
-
-  &__image {
-    $size: 56px;
-    flex-shrink: 0;
-    margin-right: 1em;
-    width: $size;
-    height: $size;
-    border-radius: 100%;
-    overflow: hidden;
-  }
-
-  &__content {
-    display: grid;
-    grid-gap: .4em;
-    font-size: .9em;
-  }
-
-  &__header {
-    margin: 0;
-    font-weight: 600;
-  }
-
-  &__subheader {
-    margin: 0;
-    opacity: .8;
-  }
-}
-*/
 
 .card {
-  max-width: 350px;
+  max-width: 400px;
+  margin: 10px;
   height: 500px;
   position: relative;
   box-shadow: $bshadow;
@@ -802,6 +634,7 @@ body {
     p {
       color: #fff;
     }
+
   }
 
   .link {
@@ -882,10 +715,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  top: 50%;
+  top: 46%;
   position: absolute;
   line-height: 1.2;
-  font-size: 0.8em;
+  font-size: 1em;
   margin: 5%;
   font-weight: 200;
   transition: $transition;
@@ -893,6 +726,7 @@ body {
   a {
     color: #000;
     text-decoration: none;
+    font-size: 1.3em;
   }
 
   p {
@@ -1014,11 +848,13 @@ label {
   max-width: 1280px;
   margin: 0 auto;
   margin-top: 70px;
+  margin-bottom: 15px;
+  margin-left: 2em;
+  margin-right: 2em;
   background: $white;
   border-radius: 2px;
   overflow: hidden;
   padding: 52px 60px 78px 60px;
-  margin-bottom: 15px;
   box-shadow: $box-shadow;
 }
 
@@ -1045,7 +881,7 @@ label {
   width: 100%;
   position: relative;
   background-color: $white;
-  border: 1px solid $dark;
+  border: 1px solid #ededed;
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -1071,6 +907,7 @@ label {
   width: 100%;
   background: transparent;
   font-size: 15px;
+  font-family: inherit;
   color: $dark;
   line-height: 1.2;
 }
@@ -1336,13 +1173,18 @@ textarea.input100 {
 /* --------------------------- FOOTER -----------------------------------*/
 .footer {
   height: auto;
+  margin: 10px 0;
 }
 
 .social-icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   vertical-align: middle;
+
+  .icon {
+    font-size: 3em;
+  }
 }
 
 .glow-on-hover {
@@ -1363,11 +1205,11 @@ textarea.input100 {
     position: absolute;
     background-size: 400%;
     z-index: -1;
-    top: -2px;
-    left: -2px;
+    top: -1px;
+    left: 4px;
     filter: blur(2px);
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
     animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
@@ -1424,6 +1266,7 @@ textarea.input100 {
 /* ---------------------- Footer2 -----------------------*/
 .footer2 {
   margin: 0 auto;
+  padding: 0 75px;
 }
 /* ---------------------- GRADBAR ANIMATIONS -------------------------- */
 
