@@ -54,10 +54,16 @@ window.onload = function () {
 };
 
 /* ------------------ Hamburger ------------------------*/
-
+/*
 $('.menu-toggle').click(function () {
   $(".nav").toggleClass("mobile-nav");
   $(this).toggleClass("is-active");
+});
+*/
+document.querySelector('.menu-toggle').addClass('.is-active');
+
+document.querySelector('.nav-item').addEventListener('click', () => {
+  document.querySelector('.nav-item').removeClass('.mobile-nav');
 });
 
 // find all links in mobile nav
