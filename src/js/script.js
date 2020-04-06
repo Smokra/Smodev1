@@ -60,12 +60,10 @@ $('.menu-toggle').click(function () {
   $(this).toggleClass("is-active");
 });
 */
-document.querySelector('.menu-toggle').addClass('.is-active');
-
-document.querySelector('.nav-item').addEventListener('click', () => {
-  document.querySelector('.nav-item').removeClass('.mobile-nav');
+document.querySelector('.menu-toggle').addEventListener.click(function (){
+  document.querySelector('.nav').toggleClass('.mobile-nav');
+  document(this).toggleClass('is-active');
 });
-
 // find all links in mobile nav
 // attach event listener
 // when clicked remove "mobile-nav" class
