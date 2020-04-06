@@ -387,12 +387,6 @@ body {
     margin: 0 auto;
     padding-top: 10px;
   }
-
-  .section3-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -414,7 +408,7 @@ body {
   }
 
   .section1 .typewriter {
-    font-size: x-large;
+    font-size: 1.6em;
     padding-top: 100px;
   }
 }
@@ -443,26 +437,6 @@ body {
   }
 
   .section1 .typewriter {
-    font-size: xx-large;
-    padding-top: 140px;
-  }
-}
-
-@media only screen and (min-width: 1690px) {
-  .section1 {
-    margin: 0 auto;
-
-    .profile img {
-      height: 550px;
-      width: 550px;
-      border-radius: 50%;
-      background: $grad;
-      border: 0px solid #eee;
-      padding: 20px;
-    }
-  }
-
-  .typewriter {
     font-size: xx-large;
     padding-top: 140px;
   }
@@ -562,16 +536,6 @@ body {
       font-size: 1.4em;
     }
   }
-
-  .section2-content .icon {
-    font-size: 5em;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .section2-content .icon {
-    font-size: 6em;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -589,15 +553,16 @@ body {
 }
 
 .section3-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1280px;
-  margin: 0 auto;
   margin-top: 65px;
   margin-bottom: 65px;
-  justify-content: space-around;
 }
 
 .card {
-  max-width: 400px;
+  max-width: 360px;
   margin: 10px;
   height: 500px;
   position: relative;
@@ -760,8 +725,15 @@ body {
 
 /* ------------------------- Section 3 - queries ---------------------- */
 @media only screen and (min-width: 720px) {
+  .section3-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .card {
     width: 45%;
+    margin: 0 auto;
+    margin-bottom: 2em;
   }
 }
 
@@ -845,7 +817,7 @@ label {
 
 .wrap-contact100 {
   min-width: 350px;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 70px;
   margin-bottom: 15px;
@@ -856,6 +828,13 @@ label {
   overflow: hidden;
   padding: 52px 60px 78px 60px;
   box-shadow: $box-shadow;
+}
+
+@media only screen and (min-width: 1280px) {
+  .wrap-contact100 {
+    margin: 0 auto;
+    margin-top: 70px;
+  }
 }
 
 /*==================================================================
@@ -1180,7 +1159,7 @@ textarea.input100 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  vertical-align: middle;
+  align-items: center;
 
   .icon {
     font-size: 3em;
@@ -1260,6 +1239,17 @@ textarea.input100 {
   .glow-on-hover {
     width: 7rem;
     height: 7rem;
+    &::before {
+      top: -2px;
+      left: -2px;
+    }
+  }
+  .social-icons {
+    height: 10em;
+
+    .icon {
+      font-size: 6em;
+    }
   }
 }
 
