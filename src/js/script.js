@@ -54,16 +54,16 @@ window.onload = function () {
 };
 
 /* ------------------ Hamburger ------------------------*/
-/*
+
 $('.menu-toggle').click(function () {
   $(".nav").toggleClass("mobile-nav");
   $(this).toggleClass("is-active");
 });
-*/
-document.querySelector('.menu-toggle').addEventListener.click(function (){
-  document.querySelector('.nav').toggleClass('.mobile-nav');
-  document(this).toggleClass('is-active');
+/*
+document.getElementsByClassName('.menu-togle')addEventListener.click(function (){
+
 });
+*/
 // find all links in mobile nav
 // attach event listener
 // when clicked remove "mobile-nav" class
