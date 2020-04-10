@@ -253,7 +253,7 @@ body {
   transform: skewY(-3deg);
   text-transform: uppercase;
   text-align: center;
-  text-shadow: $neonWhite;
+  //text-shadow: $neonWhite;
   margin: 15px 0px;
   padding: 1.4rem 0;
   justify-content: center;
@@ -272,14 +272,12 @@ body {
 
 .profile {
   margin: 0 auto;
+  filter: drop-shadow(0px 5px 5px #a8a7a7);
 
   & img {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: $grad;
-    border: 0px solid #eee;
-    padding: 10px;
   }
 }
 
@@ -290,7 +288,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   padding: 1rem 0;
-  text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
+  //text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 2px 2px 2px rgba(206, 89, 55, 0);
 
   h1 {
     font-size: 2.2em;
@@ -345,9 +343,18 @@ body {
 
 /*--------------------- SECTION 1 querys ----------------------------------*/
 @media only screen and (max-width: 720px) {
+  .typewriter {
+    text-align: center;
+  }
+
   p {
     font-size: 1.3em;
   }
+
+  h2 {
+    font-size: 2em;
+  }
+
   .section1-1content {
     padding: 10px;
   }
@@ -371,9 +378,6 @@ body {
         height: 300px;
         width: 300px;
         border-radius: 50%;
-        background: $grad;
-        border: 0px solid #eee;
-        padding: 15px;
       }
     }
 
@@ -430,15 +434,11 @@ body {
       height: 500px;
       width: 500px;
       border-radius: 50%;
-      background: $grad;
-      border: 0px solid #eee;
-      padding: 20px;
     }
   }
 
   .section1 .typewriter {
     font-size: xx-large;
-    padding-top: 140px;
   }
 }
 
@@ -478,7 +478,7 @@ body {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .tooltip {
@@ -486,8 +486,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-  filter: grayscale(100%);
+  margin-left: 3rem;
+  margin-right: 3rem;
+  //filter: grayscale(100%);
 }
 
 .tooltip .tooltiptext {
@@ -537,13 +538,6 @@ body {
     }
   }
 }
-
-@media only screen and (min-width: 1280px) {
-  .icon {
-    font-size: 7em;
-  }
-}
-
 
 /* ------------------------- SECTION 3 - Blog -------------------------*/
 
