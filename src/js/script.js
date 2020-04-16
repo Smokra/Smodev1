@@ -54,16 +54,22 @@ window.onload = function () {
 };
 
 /* ------------------ Hamburger ------------------------*/
+function classToggle () {
+  document.querySelector('.nav').classList.toggle('mobile-nav');
+  this.classList.toggle('is-active');
+}
 
-$('.menu-toggle').click(function () {
-  $(".nav").toggleClass("mobile-nav");
-  $(this).toggleClass("is-active");
+document.querySelector('.menu-toggle').addEventListener('click', classToggle);
+
+function removeMobileNav (){
+  document.querySelector('.nav').classList.remove('mobile-nav');
+}
+
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', removeMobileNav);
 });
 
-function closeNav() {
-  let element = document.getElementsByClassName('.nav-item');
-  element.classList.remove('.mobile-nav');
-}
+
 // find all links in mobile nav
 // attach event listener
 // when clicked remove "mobile-nav" class
