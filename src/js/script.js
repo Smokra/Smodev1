@@ -77,9 +77,11 @@ document.querySelectorAll('.nav-item').forEach(item => {
 // hint: addEventListener
 
 /* -------------------------- Contact form -------------------------------- */
+
+
 (function ($) {
 
-  var input = $('.validate-input .input100');
+  var input = $('.validate-input .input');
 
 
   $('.validate-form').on('submit',function(){
@@ -96,7 +98,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
   });
 
 
-  $('.validate-form .input100').each(function(){
+  $('.validate-form .input').each(function(){
       $(this).focus(function(){
          hideValidate(this);
       });

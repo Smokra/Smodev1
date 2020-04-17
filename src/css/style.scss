@@ -809,7 +809,7 @@ label {
   margin: 0;
 }
 
-.wrap-contact100 {
+.wrap-contact {
   min-width: 350px;
   max-width: 1200px;
   margin: 0 auto;
@@ -825,7 +825,7 @@ label {
 }
 
 @media only screen and (min-width: 1280px) {
-  .wrap-contact100 {
+  .wrap-contact {
     margin: 0 auto;
     margin-top: 70px;
   }
@@ -834,11 +834,11 @@ label {
 /*==================================================================
 [ Form ]*/
 
-.contact100-form {
+.contact-form {
   width: 100%;
 }
 
-.contact100-form-title {
+.contact-form-title {
   display: block;
   font-size: 30px;
   color: $dark;
@@ -850,7 +850,7 @@ label {
 /*------------------------------------------------------------------
 [ Input ]*/
 
-.wrap-input100 {
+.wrap-input {
   width: 100%;
   position: relative;
   background-color: $white;
@@ -860,7 +860,7 @@ label {
 }
 
 /*---------------------------------------------*/
-.label-input100 {
+.label-input {
   width: 22px;
   height: 100%;
   position: absolute;
@@ -870,12 +870,12 @@ label {
   left: 27px;
 }
 
-.label-input100 img {
+.label-input img {
   max-width: 100%;
 }
 
 /*---------------------------------------------*/
-.input100 {
+.input {
   display: block;
   width: 100%;
   background: transparent;
@@ -885,12 +885,12 @@ label {
   line-height: 1.2;
 }
 
-input.input100 {
+input.input {
   height: 70px;
   padding: 0 20px 0 62px;
 }
 
-textarea.input100 {
+textarea.input {
   min-height: 199px;
   padding: 25px 20px 15px 30px;
 }
@@ -898,7 +898,7 @@ textarea.input100 {
 /*------------------------------------------------------------------
 [ Focus Input ]*/
 
-.focus-input100 {
+.focus-input {
   position: absolute;
   display: block;
   width: calc(100% + 2px);
@@ -914,7 +914,7 @@ textarea.input100 {
   transform: scaleX(1.1) scaleY(1.3);
 }
 
-.input100:focus+.focus-input100 {
+.input:focus+.focus-input {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -1135,7 +1135,7 @@ textarea.input100 {
 /*------------------------- Responsive -------------------------------*/
 
 @media (max-width: 576px) {
-  .wrap-contact100 {
+  .wrap-contact {
     padding: 52px 15px 78px 15px;
     border: none;
     margin: 5px;
