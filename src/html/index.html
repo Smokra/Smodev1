@@ -24,7 +24,7 @@
           <span class="bar"></span>
         </div>
         <ul class="nav">
-          <li class="nav-item"><a data-scroll href="#about" >About</a></li>
+          <li class="nav-item"><a data-scroll href="#about">About</a></li>
           <li class="nav-item"><a data-scroll href="#skills">Skills</a></li>
           <li class="nav-item"><a data-scroll href="#blog">Blog</a></li>
           <li class="nav-item"><a data-scroll href="#projects">Projects</a></li>
@@ -76,7 +76,8 @@
             <svg class="icon icon-edit">
               <use xlink:href="./img/icons.svg#icon-html5"></use>
             </svg>
-            <span class="tooltiptext">HTML 5<br>I start each project by creating a good structure and preparing tags for good SEO.</span>
+            <span class="tooltiptext">HTML 5<br>I start each project by creating a good structure and preparing tags for
+              good SEO.</span>
             <p>HTML</p>
           </div>
           <div class="tooltip">
@@ -91,7 +92,8 @@
               <use xlink:href="./img/icons.svg#icon-edit"></use>
             </svg>
             <p>JavaScript</p>
-            <span class="tooltiptext">A place where the magic happens. With this, I create the dynamic and functionality of the site.</span>
+            <span class="tooltiptext">A place where the magic happens. With this, I create the dynamic and functionality
+              of the site.</span>
           </div>
           <div class="tooltip">
             <svg class="icon icon-edit">
@@ -130,7 +132,8 @@
               <use xlink:href="./img/icons.svg#icon-figma1"></use>
             </svg>
             <p>Figma</p>
-            <span class="tooltiptext">Although it can be the same as Photoshop, this tool has proven to be great when collaborating with others on a larger project.</span>
+            <span class="tooltiptext">Although it can be the same as Photoshop, this tool has proven to be great when
+              collaborating with others on a larger project.</span>
           </div>
           <div class="tooltip">
             <svg class="icon icon-edit">
@@ -144,7 +147,8 @@
               <use xlink:href="./img/icons.svg#icon-visualstudiocode"></use>
             </svg>
             <p>VS code</p>
-            <span class="tooltiptext">My favorite code editor. Without his extensions, writing code would be unthinkable to me.</span>
+            <span class="tooltiptext">My favorite code editor. Without his extensions, writing code would be unthinkable
+              to me.</span>
           </div>
           <div class="tooltip">
             <svg class="icon icon-edit">
@@ -177,7 +181,8 @@
             <a href="https://dev.to/ivansmokrovic/setup-2eh4">
               <h3>Setup</h3>
             </a>
-            <p>For my second article, I decided to make a list of everything I use from hardware, software, and extensions to be as productive as possible as a UI developer.</p>
+            <p>For my second article, I decided to make a list of everything I use from hardware, software, and
+              extensions to be as productive as possible as a UI developer.</p>
           </div>
           <a class="link" href="https://dev.to/ivansmokrovic/setup-2eh4">Read more</a>
         </div>
@@ -198,7 +203,8 @@
             <a href="https://dev.to/ivansmokrovic/pursuit-of-happiness-2m11">
               <h3>Pursuit of happiness</h3>
             </a>
-            <p>In this article, I will explain to you how, at the age of thirty, I decided to change my profession and pursue my passion.</p>
+            <p>In this article, I will explain to you how, at the age of thirty, I decided to change my profession and
+              pursue my passion.</p>
           </div>
           <a class="link" href="https://dev.to/ivansmokrovic/pursuit-of-happiness-2m11">Read more</a>
         </div>
@@ -236,10 +242,14 @@
         <h3>Contact</h3>
       </div>
       <div class="wrap-contact">
-        <form name="contact" class="contact-form validate-form" data-netlify="true">
+        <form name="contact" class="contact-form validate-form" netlify-honeypot="bot-field" data-netlify="true">
           <span class="contact-form-title">
             Send Me A Message
           </span>
+
+          <div class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </div>
 
           <div class="wrap-input validate-input" data-validate="Valid email is required: ex@abc.xyz">
             <label class="label-input" for="email">
@@ -298,6 +308,7 @@
     <section class="footer2">
       <p>This page is made with <i class="fa fa-heart-o"></i> by Ivan Smokrović, © <script>
           document.write(new Date().getFullYear());
+
         </script>
       </p>
     </section>
