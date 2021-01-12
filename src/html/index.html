@@ -5,15 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smodev - Ivan Smokrović</title>
+  <title>Ivan Smokrović - Smodev</title>
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--ukloniti jQuery!!!-->
   <script src="https://kit.fontawesome.com/4b39256c41.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <meta name="google-site-verification" content="b-UMjMzb993NdqFwqFNDZpY9Mk9SS8iJmUhSV_P6etA" />
+  <style>
+    canvas {
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  </style>
 </head>
 
 <body>
   <div class="page-wrapper">
+    <div class="animation">
+      <div class="animation__2d">
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_usd9jrpk.json" background="transparent"
+          speed="1" style="width: 100vw; height: 100vh;" preserveAspectRatio="none" autoplay></lottie-player>
+      </div>
+
+    </div>
+    <div id='container'>
+      <canvas id="canvas3d"></canvas>
+    </div>
     <section class="nav-wrapper">
       <div class="grad-bar"></div>
       <nav class="navbar">
@@ -314,6 +341,16 @@
     </section>
     <div class="grad-bar"></div>
   </div>
+  <script>
+    // Global namespace (backwards-compatibility)
+    var SPE = {};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.spline.design/lib/anime.min.js"></script>
+<script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+<script src="../js/js-spline/assets.js"></script>
+<script src="../js/js-spline/scene.js"></script>
+<script src="../js/js-spline/main.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

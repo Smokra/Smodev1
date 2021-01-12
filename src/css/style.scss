@@ -5,6 +5,13 @@ $black: #000;
 $white: #fff;
 $light-gray: #fefefe;
 $alert: #c80000;
+// New colors
+$blue: #00bcd4;
+$light-blue: #b2ebf2;
+$orange: #ff5722;
+$dark-orange: #dd2c00;
+$background: #1a1a1a;
+
 $grad: linear-gradient(90deg, rgba(81, 183, 251, 1) 24%, rgba(200, 228, 241, 1) 76%);
 $box-shadow: 0 1px 15px -10px rgba(0, 0, 0, .8);
 $bshadow: 0 1px 15px -10px rgba(0, 0, 0, 0.8);
@@ -19,19 +26,22 @@ $delay: 0.2s;
 $duration: 0.8s;
 $color: #239dd5;
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 13px;
+  background-color: $background;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', 'Karla', sans-serif;
+  font-family: 'Monserat', 'Roboto', sans-serif;
 }
 
 /*--------------------------- BASIC SETUP --------------------------------*/
