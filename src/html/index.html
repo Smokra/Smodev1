@@ -31,16 +31,16 @@
 
 <body>
   <div class="page-wrapper">
+    <div id='container'>
+      <canvas id="canvas3d"></canvas>
+    </div>
     <div class="animation">
       <div class="animation__2d">
         <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_usd9jrpk.json" background="transparent"
           speed="1" style="width: 100vw; height: 100vh;" preserveAspectRatio="none" autoplay></lottie-player>
       </div>
+    </div>
 
-    </div>
-    <div id='container'>
-      <canvas id="canvas3d"></canvas>
-    </div>
     <section class="nav-wrapper">
       <div class="grad-bar"></div>
       <nav class="navbar">
@@ -344,13 +344,13 @@
   <script>
     // Global namespace (backwards-compatibility)
     var SPE = {};
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.spline.design/lib/anime.min.js"></script>
-<script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
-<script src="../js/js-spline/assets.js"></script>
-<script src="../js/js-spline/scene.js"></script>
-<script src="../js/js-spline/main.js"></script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.spline.design/lib/anime.min.js"></script>
+  <script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+  <script src="./js/assets.js"></script>
+  <script src="./js/scene.js"></script>
+  <script src="./js/main.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

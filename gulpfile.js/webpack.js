@@ -4,7 +4,10 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    script: helpers.parse('helpers.source/config.js.src/script.js')
+    script: helpers.parse('helpers.source/config.js.src/script.js'),
+    assets: helpers.parse('helpers.source/config.js.src/assets.js'),
+    main: helpers.parse('helpers.source/config.js.src/main.js'),
+    scene: helpers.parse('helpers.source/config.js.src/scene.js')
   },
   output: {
     path: path.resolve(`${__dirname}/${helpers.parse('helpers.dist/config.js.dist/')}`),
