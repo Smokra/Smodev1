@@ -24,27 +24,28 @@
     #container {
       width: 100%;
       height: 100%;
-      position: relative;
     }
   </style>
 </head>
 
 <body>
   <div class="page-wrapper">
-    <div id='container'>
-      <canvas id="canvas3d"></canvas>
-    </div>
+
     <div class="animation">
       <div class="animation__2d">
         <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_usd9jrpk.json" background="transparent"
           speed="1" style="width: 100vw; height: 100vh;" preserveAspectRatio="none" autoplay></lottie-player>
       </div>
+      <div class="animation3d">
+        <div id='container'>
+          <canvas id="canvas3d"></canvas>
+        </div>
+      </div>
     </div>
 
     <section class="nav-wrapper">
-      <div class="grad-bar"></div>
       <nav class="navbar">
-        <a data-scroll href="#"><img src="./img/smodev-txt.png" alt="Smodev text Logo without name, just Smodev"></a>
+        <a data-scroll href="#"><img src="./img/3dLogo.webp" alt="My logo"></a>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -59,6 +60,7 @@
         </ul>
       </nav>
     </section>
+    <!--
     <section class="section1">
       <div class="typewriter">
         <h1>Hi I'm Ivan Smokrović</h1>
@@ -241,7 +243,7 @@
       <div id="projects">
         <h3>Projects</h3>
       </div>
-      <!--
+
       <div class="section4-content">
         <a href="#" class="mockup">
           <img src="./img/mockup.png" alt="my mockup">
@@ -262,7 +264,7 @@
           <img src="./img/mockup.png" alt="my mockup">
         </a>
       </div>
-      -->
+
     </section>
     <section class="section5">
       <div id="contact">
@@ -303,6 +305,7 @@
         </form>
       </div>
     </section>
+    -->
     <section class="footer">
       <div class="social-icons">
         <a href="https://github.com/Smokra" class="glow-on-hover">
@@ -344,12 +347,11 @@
   <script>
     // Global namespace (backwards-compatibility)
     var SPE = {};
+    var SPE_USES_PREVIEW_IMAGE = false;
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.spline.design/lib/anime.min.js"></script>
   <script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
-  <script src="./js/assets.js"></script>
-  <script src="./js/scene.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/script.js"></script>
 </body>
