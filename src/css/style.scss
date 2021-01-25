@@ -63,54 +63,182 @@ body {
 }
 
 /*--------------------------- NAVIGATION ----------------------------------*/
-
-.nav-wrapper {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: $white;
-  box-shadow: $box-shadow;
-  z-index: 99;
-}
-
-.navbar {
+header {
+  position: relative;
   display: flex;
-  align-items: center;
-  height: 60px;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.header__button {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #dd2c00;
+  text-decoration: underline;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -18px;
+  outline: none;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+}
+
+.header__button[data-open="true"] {
+  background-color: #1a1a1a;
+  color: #fff;
+  animation-name: scale;
+}
+
+.header__button[data-open="false"] {
+  transition: background-color 250ms linear;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.header__nav {
+  background-color: #dd2c00;
+  position: fixed;
   overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  clip-path: circle(var(--radius) at calc(100% - 55px) 47px);
+}
 
-  & img {
-    height: 25px;
-    width: auto;
-    margin-left: 20px;
-  }
+.header__nav[data-active="true"] {
+  visibility: visible;
+}
 
-  & ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-left: auto;
-    padding: 0px;
-  }
+.header__menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 
-  & .nav-item a {
-    color: $black;
-    font-size: 1.3em;
-    font-weight: 400;
-    text-decoration: none;
-    text-shadow: $neonWhite;
+.header__menu>.header__menu-item {
+  font-size: 10vh;
+}
+
+.header__menu>.header__menu-item:not(:last-of-type) {
+  margin-bottom: 0.1em;
+}
+
+.header__menu-item a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu-item a:hover {
+  font-style: italic;
+}
+
+.glitch {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  letter-spacing: 5px;
+
+  &:before,
+  &:after {
+    display: block;
+    content: attr(data-glitch);
     text-transform: uppercase;
-    transition: color 0.3s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
 
-    &:hover {
-      color: $primary;
+  &:after {
+    color: #ff5722;
+    z-index: -2;
+  }
+
+  &:before {
+    color: #00bcd4;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
     }
 
-    &:active {
-      color: #000;
+    &:after {
+      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
     }
   }
 }
+
+/*
+@media only screen and (max-width: 400px) {
+  .glitch {
+    font-size: 3em;
+  }
+}
+*/
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-5px, 5px);
+  }
+
+  40% {
+    transform: translate(-5px, -5px);
+  }
+
+  60% {
+    transform: translate(5px, 5px);
+  }
+
+  80% {
+    transform: translate(5px, -5px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
 
 /* ------------------ MOBILE MENU & ANIMATION ----------------------------*/
 
@@ -1277,48 +1405,4 @@ textarea.input {
 .footer2 {
   margin: 0 auto;
   padding: 0 75px;
-}
-
-/* ---------------------- GRADBAR ANIMATIONS -------------------------- */
-
-@-webkit-keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@-moz-keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
 }

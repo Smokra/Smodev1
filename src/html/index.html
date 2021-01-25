@@ -25,11 +25,28 @@
       width: 100%;
       height: 100%;
     }
+
   </style>
 </head>
 
 <body>
   <div class="page-wrapper">
+    <header>
+      <div>
+        <a data-scroll href="#">
+          <img src="./img/3dLogo.webp" class="logo" alt="My logo">
+        </a>
+        <button type="button" class="header__button nav-btn-js " id="toggle-txt" data-text-swap="Close">Menu</button>
+        <nav class="header__nav nav-js" data-active="false">
+          <ul class="header__menu">
+            <li class="header__menu-item"><a class="glitch" data-glitch="About" href="#">About</a></li>
+            <li class="header__menu-item"><a class="glitch" data-glitch="Projects" href="#">Projects</a></li>
+            <li class="header__menu-item"><a class="glitch" data-glitch="Blog" href="#">Blog</a></li>
+            <li class="header__menu-item"><a class="glitch" data-glitch="Contact" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <div class="animation">
       <div class="animation__2d">
@@ -43,23 +60,7 @@
       </div>
     </div>
 
-    <section class="nav-wrapper">
-      <nav class="navbar">
-        <a data-scroll href="#"><img src="./img/3dLogo.webp" alt="My logo"></a>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav">
-          <li class="nav-item"><a data-scroll href="#about">About</a></li>
-          <li class="nav-item"><a data-scroll href="#skills">Skills</a></li>
-          <li class="nav-item"><a data-scroll href="#blog">Blog</a></li>
-          <li class="nav-item"><a data-scroll href="#projects">Projects</a></li>
-          <li class="nav-item"><a data-scroll href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </section>
+
     <!--
     <section class="section1">
       <div class="typewriter">
@@ -348,10 +349,12 @@
     // Global namespace (backwards-compatibility)
     var SPE = {};
     var SPE_USES_PREVIEW_IMAGE = false;
+
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.spline.design/lib/anime.min.js"></script>
   <script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.9/dist/index.iife.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/script.js"></script>
 </body>
