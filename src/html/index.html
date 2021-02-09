@@ -263,11 +263,19 @@
         <h3>Contact</h3>
       </div>
       <div class="wrap-contact">
+<<<<<<< HEAD
         <name="contact" class="contact-form validate-form">
           <!--data-netlify="true"> ################  obavezno aktivirati nakon zavretka testiranja forme !!!!!!!!!!-->
+=======
+        <form name="contact" class="contact-form validate-form" netlify-honeypot="bot-field" data-netlify="true">
+>>>>>>> cce8a7a400e0bef0a49d6e80e2194f92d3e14ecd
           <span class="contact-form-title">
             Send Me A Message
           </span>
+
+          <div class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </div>
 
           <div class="wrap-input validate-input" data-validate="Valid email is required: ex@abc.xyz">
             <label class="label-input" for="email">
@@ -326,6 +334,7 @@
     <section class="footer2">
       <p>This page is made with <i class="fa fa-heart-o"></i> by Ivan Smokrović, © <script>
           document.write(new Date().getFullYear());
+
         </script>
       </p>
     </section>
